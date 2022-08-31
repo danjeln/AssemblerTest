@@ -1,0 +1,7 @@
+dto\TestObjectChildDTO.class
+entities\TestChangedString.class
+dto\TestObjectParentDTO.class
+dto\TestDTO.class
+dto\TestMappedStringDTO.class
+entities\TestDate.class
+entities\TestEntity.class

@@ -1,0 +1,15 @@
+request\RequestData.class
+dto\TestEntityDTO.class
+assembler\annotation\LoggingDescriptor.class
+dto\AbstractDTO.class
+assembler\AssemblerFactory.class
+entities\MasterEntity.class
+entities\TestEntity.class
+assembler\annotation\AssemblerProperty.class
+assembler\AssemblerObject.class
+request\RequestDataType.class
+assembler\AbstractAssembler.class
+exception\AssemblerException.class
+util\DTOUtil.class
+assembler\DefaultAssembler.class
+assembler\TestEntityAssembler.class
