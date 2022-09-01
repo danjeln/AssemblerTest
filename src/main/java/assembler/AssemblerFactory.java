@@ -4,14 +4,13 @@ package assembler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
  * AssemblerFactory skapar en assembler som passar ihop med den entitet/dto som skall transferera data
  * Om ingen specifik assembler finns används defaultassemblern
  *
- * @author u0064563
+ * @author nybda
  */
 
 

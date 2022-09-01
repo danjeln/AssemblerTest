@@ -19,7 +19,7 @@ import request.RequestDataType;
 /**
  * Test för defaultassembler
  * 
- * @author u0064563
+ * @author nybda
  *
  */
 public class DefaultAssemblerTest {

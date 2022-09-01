@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 
 /**
  * 
- * Används av DefaultAssemblern för att bedömma hur vissa properties skall hanteras vid transfern
+ * Används av DefaultAssemblern för att bedöma hur vissa properties skall hanteras vid transfern
  * t.ex. kan man använda mapsto för att bestämma att en viss property i dto'n skall mappas mot en annan
  * property i entiteten. t.ex. 
  * 
@@ -16,7 +16,7 @@ import java.lang.annotation.Retention;
  * Man kan även välja att ignorera vissa properties som kanske bara skall finnas i dto'n eller räknas
  * fram av en annan assembler etc.
  * 
- * @author u0064563
+ * @author nybda
  *
  */
 @Retention(RUNTIME)

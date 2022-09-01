@@ -25,29 +25,29 @@ import util.DTOUtil;
  * Hanterar transfer av data mellan generell entity och dto
  * 
  * Den läser upp alla fält som finns i dto/entity beroende på riktning och
- * försöker hitta ett matchande fält i mottagande klass med hjälpl av namn och
+ * försöker hitta ett matchande fält i mottagande klass med hjälp av namn och
  * Annoteringen @AssemblerProperty. Skulle inget fält finnas loggas en varning.
  * (beroende på riktning)
  * 
  * Den har i princip tre beteenden när den överför fält mellan entitet/dto och
- * dto/entitet. 1. fältet är en AbstractDTO/MasterEntity, då anropar den sig
+ * dto/entitet. 1. fältet är en AMasterDTO/MasterEntity, då anropar den sig
  * självt med objektet som argument 2. fältet är av enkel typ (String, Date,
  * Number etc.), då överför den datat direkt till mottagande klass 3. fältet är
- * en kollektion som innehåller objekt av typen: 3.1 AbstractDTO/MasterEntity då
+ * en kollektion som innehåller objekt av typen: 3.1 MasterDTO/MasterEntity då
  * anropas den sig självt med objektet som argument tills listan är genomarbetad
  * 3.2 enkel typ, då överför den objekt för objekt i listan tills listan är
  * genomarbetad 3.3 fältet är en kollektion som innehåller objekt av typen: ...
  * 
- * När en kollektion överförs kommer den att först bedömma om det är ett nytt
- * objekt i listan eller om det är ett befintligt. Beoende på kommer den att
+ * När en kollektion överförs kommer den att först bedöma om det är ett nytt
+ * objekt i listan eller om det är ett befintligt. Beroende på kommer den att
  * anropa rätt metod i Assemblern. Detta har att göra med mallobjekt som
  * beskrivs ytterligare i AbstractAssembler Efter den gått igenom nya och
- * ändrade objekt i kollektionen kommer den att bedömma om något har tagits bort
- * och i sin tur radera det objektet i mottagande klass. Dett aär speciellt
+ * ändrade objekt i kollektionen kommer den att bedöma om något har tagits bort
+ * och i sin tur radera det objektet i mottagande klass. Det är speciellt
  * viktigt om det är getEntityFromDTO som anropas och resultatet skall mergas,
  * eller persisteras efter operationen.
  * 
- * @author u0064563
+ * @author nybda
  *
  */
 

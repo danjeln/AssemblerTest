@@ -1,18 +1,14 @@
 package assembler;
 
-import dto.CustomEntityDTO;
 import dto.MasterDTO;
-import entities.CustomEntity;
 import entities.MasterEntity;
 import exception.AssemblerException;
 
-public class CustomEntityAssembler extends AbstractAssembler{
+public class CustomEntityAssembler extends AbstractAssembler {
     @Override
     public MasterDTO getDTOFromEntity(MasterEntity entity, MasterDTO dto) throws AssemblerException {
         DefaultAssembler assembler = new DefaultAssembler();
-        CustomEntityDTO res = (CustomEntityDTO) assembler.getDTOFromEntity(entity, dto);
-        //res.setCustomValue(((CustomEntity)entity).getCustomValue());
-        return res;
+        return assembler.getDTOFromEntity(entity, dto);
     }
 
     @Override

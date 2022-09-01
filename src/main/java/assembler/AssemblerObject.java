@@ -18,8 +18,8 @@ import request.RequestDataType;
  * använder reflection för att läsa ut innehållet och skriva ner innehållet i objektet
  * 
  * Har även de statiska metoderna för att logga ändringar på objekten.
- * 
- * @author u0064563
+ *
+ * @author nybda
  *
  */
 
@@ -46,7 +46,7 @@ public class AssemblerObject {
 	
 	public Object getValue() {
 		try {
-			boolean accessible = f.isAccessible();
+			boolean accessible = f.canAccess(o);
 			f.setAccessible(true);
 			Object value = f.get(o);
 			f.setAccessible(accessible);
@@ -77,7 +77,7 @@ public class AssemblerObject {
 			propertyChanged(o, f);
 		}
 		try {
-			boolean accessible = f.isAccessible();
+			boolean accessible = f.canAccess(o);
 			f.setAccessible(true);
 			f.set(o, value);
 			f.setAccessible(accessible);

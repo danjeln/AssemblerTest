@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
  * MasterEntity me = em.find(Arende.class, 1L); MasterEntity updated =
  * assembler.getEntityFromDto(dto, me);
  *
- * @author u0064563
+ * @author nybda
  */
 
 public abstract class AbstractAssembler {
