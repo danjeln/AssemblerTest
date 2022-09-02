@@ -1,8 +1,6 @@
 package assembler;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
+import datalog.Datalog;
 import dto.CustomEntityDTO;
 import entities.CustomEntity;
 import exception.AssemblerException;
@@ -14,6 +12,8 @@ import datalog.ChangedDataType;
 
 import java.util.List;
 
+import static org.junit.Assert.*;
+
 public class CustomEntityAssemblerTest {
 
     @Before
@@ -23,13 +23,13 @@ public class CustomEntityAssemblerTest {
 
     @After
     public void tearDown() {
-        List<String> lst = getChangedProperties();
+        List<Datalog> lst = getChangedProperties();
         assertTrue(lst.size() > 0);
     }
 
     @SuppressWarnings("unchecked")
-    private List<String> getChangedProperties() {
-        return (List<String>) ChangedData.INSTANCE.getData(ChangedDataType.CHANGED_PROPERTIES);
+    private List<Datalog> getChangedProperties() {
+        return (List<Datalog>) ChangedData.INSTANCE.getData(ChangedDataType.CHANGED_PROPERTIES);
     }
 
     @Test
@@ -43,8 +43,10 @@ public class CustomEntityAssemblerTest {
 
         CustomEntity t2 = (CustomEntity) assembler.getEntityFromDTO(dto,t);
 
-        List<String> lst = getChangedProperties();
-        assertEquals("customValue", lst.get(0));
+        assertNotNull(t2.getDatum1());
+
+        List<Datalog> lst = getChangedProperties();
+        assertEquals("customValue", lst.get(0).getDescription());
 
 
 

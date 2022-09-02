@@ -9,9 +9,9 @@ C:\dev\work\AssemberDemo\src\test\java\entities\TestEntity.java
 C:\dev\work\AssemberDemo\src\test\java\dto\TestMappedStringDTO.java
 C:\dev\work\AssemberDemo\src\test\java\entities\TestObjectChild.java
 C:\dev\work\AssemberDemo\src\test\java\entities\TestList.java
-C:\dev\work\AssemberDemo\src\test\java\assembler\TestEntityAssemblerTest.java
 C:\dev\work\AssemberDemo\src\test\java\dto\TestObjectParentDTO.java
 C:\dev\work\AssemberDemo\src\test\java\dto\TestObjectChildDTO.java
+C:\dev\work\AssemberDemo\src\test\java\assembler\CustomEntityAssemblerTest.java
 C:\dev\work\AssemberDemo\src\test\java\dto\TestListDTO.java
 C:\dev\work\AssemberDemo\src\test\java\entities\TestMappedString.java
 C:\dev\work\AssemberDemo\src\test\java\dto\TestDateDTO.java
