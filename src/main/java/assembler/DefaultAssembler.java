@@ -205,7 +205,7 @@ public class DefaultAssembler extends AbstractAssembler {
 									}
 									if (remoteEntity == null) {
 										// item tillagt i lista
-										AssemblerObject.propertyChanged(entity, entityObject.getField(), "tillägg");
+										AssemblerObject.propertyChanged(entity, entityObject.getField(), "tillägg", "", "");
 									}
 									MasterEntity updatedEntity = assembler.getEntityFromDTO((MasterDTO) co,
 											remoteEntity);
@@ -224,7 +224,7 @@ public class DefaultAssembler extends AbstractAssembler {
 									Object o = iter.next();
 									if (!handledHashCodes.contains(o.hashCode())) {
 										// item borttaget ur lista
-										AssemblerObject.propertyChanged(entity, entityObject.getField(), "borttag");
+										AssemblerObject.propertyChanged(entity, entityObject.getField(), "borttag", "", "");
 										iter.remove();
 									}
 								}

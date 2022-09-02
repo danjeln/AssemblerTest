@@ -5,13 +5,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import request.RequestData;
+import datalog.ChangedData;
 
 public class AssemblerFactoryTest {
 
 	@Before
 	public void setup() {
-		RequestData.INSTANCE.reset();
+		ChangedData.INSTANCE.reset();
 	}
 	
 	@Test

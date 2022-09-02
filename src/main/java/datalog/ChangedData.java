@@ -1,16 +1,16 @@
-package request;
+package datalog;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public enum RequestData {
+public enum ChangedData {
 	INSTANCE;
 
-	private ThreadLocal<Map<RequestDataType, Object>> data;
+	private ThreadLocal<Map<ChangedDataType, Object>> data;
 
-	public ThreadLocal<Map<RequestDataType, Object>> getRequestData() {
+	public ThreadLocal<Map<ChangedDataType, Object>> getRequestData() {
 		if (data == null) {
-			data = new ThreadLocal<Map<RequestDataType, Object>>();
+			data = new ThreadLocal<Map<ChangedDataType, Object>>();
 			data.set(new HashMap<>());
 		}
 		if (data.get() == null) {
@@ -19,15 +19,15 @@ public enum RequestData {
 		return data;
 	}
 
-	public void setRequestData(ThreadLocal<Map<RequestDataType, Object>> data) {
+	public void setRequestData(ThreadLocal<Map<ChangedDataType, Object>> data) {
 		this.data = data;
 	}
 
-	public void addData(RequestDataType key, Object val) {
+	public void addData(ChangedDataType key, Object val) {
 		getRequestData().get().put(key, val);
 	}
 
-	public Object getData(RequestDataType key) {
+	public Object getData(ChangedDataType key) {
 		return getRequestData().get().get(key);
 	}
 

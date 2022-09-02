@@ -9,8 +9,8 @@ import exception.AssemblerException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import request.RequestData;
-import request.RequestDataType;
+import datalog.ChangedData;
+import datalog.ChangedDataType;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class CustomEntityAssemblerTest {
 
     @Before
     public void setup() {
-        RequestData.INSTANCE.reset();
+        ChangedData.INSTANCE.reset();
     }
 
     @After
@@ -29,7 +29,7 @@ public class CustomEntityAssemblerTest {
 
     @SuppressWarnings("unchecked")
     private List<String> getChangedProperties() {
-        return (List<String>) RequestData.INSTANCE.getData(RequestDataType.CHANGED_PROPERTIES);
+        return (List<String>) ChangedData.INSTANCE.getData(ChangedDataType.CHANGED_PROPERTIES);
     }
 
     @Test
