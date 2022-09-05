@@ -36,7 +36,8 @@ public class CustomEntityAssemblerTest {
     public void CustomAssemblerConversionTest() throws AssemblerException {
         CustomEntity t = new CustomEntity();
         t.setCustomValue("Testing1234");
-        AbstractAssembler assembler = AssemblerFactory.INSTANCE.createAssembler();
+        t.setYesOrNo(true);
+        AbstractAssembler assembler = AssemblerFactory.INSTANCE.createAssembler("CustomEntity");
         CustomEntityDTO dto = (CustomEntityDTO) assembler.getDTOFromEntity(t);
 
         dto.setCustomValue("Hej");
@@ -44,6 +45,7 @@ public class CustomEntityAssemblerTest {
         CustomEntity t2 = (CustomEntity) assembler.getEntityFromDTO(dto,t);
 
         assertNotNull(t2.getDatum1());
+        System.out.println(dto.isYesOrNo());
 
         List<Datalog> lst = getChangedProperties();
         assertEquals("customValue", lst.get(0).getDescription());

@@ -25,4 +25,12 @@ public class CustomEntity extends MasterEntity{
     public void setDatum1(Date datum1) {
         this.datum1 = datum1;
     }
+
+    public boolean isYesOrNo() {
+        return yesOrNo;
+    }
+
+    public void setYesOrNo(boolean yesOrNo) {
+        this.yesOrNo = yesOrNo;
+    }
 }

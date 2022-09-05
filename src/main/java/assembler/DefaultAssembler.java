@@ -2,6 +2,7 @@ package assembler;
 
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -302,8 +303,8 @@ public class DefaultAssembler extends AbstractAssembler {
 
 	private Object getNewInstanceOfClass(Class<?> c) throws AssemblerException {
 		try {
-			return c.newInstance();
-		} catch (InstantiationException | IllegalAccessException e) {
+            return c.getDeclaredConstructor().newInstance();
+		} catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
 			logger.error("kan inte skapa klass av typen " + c.getSimpleName());
 			throw new AssemblerException("Kan inte skapa klass", e);
 		}

@@ -13,6 +13,9 @@ public class CustomEntityDTO extends MasterDTO {
 
     private Date datum2;
 
+    @AssemblerProperty(ignore = true)
+    private String yesOrNo;
+
     public String getCustomValue() {
         return customValue;
     }
@@ -35,5 +38,13 @@ public class CustomEntityDTO extends MasterDTO {
 
     public void setDatum2(Date datum2) {
         this.datum2 = datum2;
+    }
+
+    public String isYesOrNo() {
+        return yesOrNo;
+    }
+
+    public void setYesOrNo(String yesOrNo) {
+        this.yesOrNo = yesOrNo;
     }
 }
